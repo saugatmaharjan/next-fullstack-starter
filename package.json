@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "check": "bunx @biomejs/biome check --apply-unsafe .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "cz": "git-cz"
   },
   "dependencies": {
     "react": "^18",
@@ -16,10 +17,12 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.5.3",
+    "@digitalroute/cz-conventional-changelog-for-jira": "^8.0.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "commitizen": "^4.3.0",
     "husky": "^9.0.6",
     "lint-staged": "^15.2.0",
     "postcss": "^8",
@@ -30,5 +33,10 @@
     "*.{js,jsx,ts,tsx,css,scss,json}": [
       "bunx @biomejs/biome check --apply-unsafe ."
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/@digitalroute/cz-conventional-changelog-for-jira"
+    }
   }
 }
